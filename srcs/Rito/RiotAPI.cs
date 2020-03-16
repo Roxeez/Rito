@@ -3,6 +3,7 @@ using Rito.Core.Serialization;
 using Rito.Network;
 using Rito.Services;
 using Rito.Services.Champions;
+using Rito.Services.Masteries;
 using Rito.Services.Summoners;
 
 namespace Rito
@@ -14,6 +15,9 @@ namespace Rito
         
         [NotNull]
         public ISummonerService Summoners { get; }
+        
+        [NotNull]
+        public IMasteryService Masteries { get; }
 
         public RiotAPI([NotNull] string apiKey)
         {
@@ -22,6 +26,7 @@ namespace Rito
             
             Champions = new ChampionService(networkClient, deserializer);
             Summoners = new SummonerService(networkClient, deserializer);
+            Masteries = new MasteryService(networkClient, deserializer);
         }
     }
 }
