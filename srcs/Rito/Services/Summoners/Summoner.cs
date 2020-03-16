@@ -19,6 +19,9 @@ namespace Rito.Services.Summoners
         public string Name { get; private set; }
         
         [JsonProperty]
+        public string PUUID { get; private set; }
+        
+        [JsonProperty("summonerLevel")]
         public long Level { get; private set; }
         
         [JsonProperty]

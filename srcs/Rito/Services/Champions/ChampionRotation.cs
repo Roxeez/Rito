@@ -8,14 +8,14 @@ namespace Rito.Services.Champions
         /// <summary>
         /// Free champions rotation for beginners
         /// </summary>
-        [JsonProperty]
-        public List<int> FreeChampionIdsForNewPlayers { get; private set; }
+        [JsonProperty("freeChampionIdsForNewPlayers")]
+        public List<int> FreeChampionsForNewPlayers { get; private set; }
         
         /// <summary>
         /// Free champions rotation
         /// </summary>
-        [JsonProperty]
-        public List<int> FreeChampionIds { get; private set; }
+        [JsonProperty("freeChampionIds")]
+        public List<int> FreeChampions { get; private set; }
         
         /// <summary>
         /// Define what's the maximum level to be considered as beginner
