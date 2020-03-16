@@ -11,7 +11,7 @@ namespace Rito.Services
     public interface ISummonerService
     {
         /// <summary>
-        /// Get summoner information using summoner name
+        /// Get a summoner by summoner name
         /// </summary>
         /// <param name="region">Region on which the summoner is located</param>
         /// <param name="summonerName">Name of the summoner</param>
@@ -20,7 +20,7 @@ namespace Rito.Services
         Task<Summoner> GetSummonerByName(Region region, [NotNull] string summonerName);
 
         /// <summary>
-        /// Get summoner information using account id
+        /// Get a summoner by account ID
         /// </summary>
         /// <param name="region">Region on which the summoner is located</param>
         /// <param name="encryptedAccountId">Encrypted account id</param>
@@ -29,7 +29,7 @@ namespace Rito.Services
         Task<Summoner> GetSummonerByAccountId(Region region, [NotNull] string encryptedAccountId);
 
         /// <summary>
-        /// Get summoner information using summoner id
+        /// Get a summoner by summoner ID
         /// </summary>
         /// <param name="region">Region on which the summoner is located</param>
         /// <param name="encryptedSummonerId">Encrypted summoner id</param>
@@ -38,7 +38,7 @@ namespace Rito.Services
         Task<Summoner> GetSummonerBySummonerId(Region region, [NotNull] string encryptedSummonerId);
 
         /// <summary>
-        /// Get summoner information using PUUID
+        /// Get a summoner by PUUID
         /// </summary>
         /// <param name="region">Region on which the summoner is located</param>
         /// <param name="encryptedPUUID">Encrypted summoner PUUID</param>

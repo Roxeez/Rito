@@ -24,25 +24,25 @@ namespace Rito.Services.Summoners
 
         public async Task<Summoner> GetSummonerByName(Region region, string summonerName)
         {
-            string response = await _networkClient.SendFormattedGetRequest($"{ROOT_URL}{BY_NAME_URL}", region, summonerName);
+            string response = await _networkClient.SendGetRequest(region, $"{ROOT_URL}{BY_NAME_URL}", summonerName);
             return _deserializer.Deserialize<Summoner>(response);
         }
 
         public async Task<Summoner> GetSummonerByAccountId(Region region, string encryptedAccountId)
         {
-            string response = await _networkClient.SendFormattedGetRequest($"{ROOT_URL}{BY_ACCOUNT_URL}", region, encryptedAccountId);
+            string response = await _networkClient.SendGetRequest(region, $"{ROOT_URL}{BY_ACCOUNT_URL}", encryptedAccountId);
             return _deserializer.Deserialize<Summoner>(response);
         }
 
         public async Task<Summoner> GetSummonerBySummonerId(Region region, string encryptedSummonerId)
         {
-            string response = await _networkClient.SendFormattedGetRequest($"{ROOT_URL}{BY_SUMMONER_ID}", region, encryptedSummonerId);
+            string response = await _networkClient.SendGetRequest(region, $"{ROOT_URL}{BY_SUMMONER_ID}", encryptedSummonerId);
             return _deserializer.Deserialize<Summoner>(response);
         }
 
         public async Task<Summoner> GetSummonerByPUUID(Region region, string encryptedPUUID)
         {
-            string response = await _networkClient.SendFormattedGetRequest($"{ROOT_URL}{BY_PUUID}", region, encryptedPUUID);
+            string response = await _networkClient.SendGetRequest(region, $"{ROOT_URL}{BY_PUUID}", encryptedPUUID);
             return _deserializer.Deserialize<Summoner>(response);
         }
     }

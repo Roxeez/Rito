@@ -10,7 +10,7 @@ namespace Rito.Services
     public interface IChampionService
     {
         /// <summary>
-        /// Get region current champion rotation
+        /// Returns champion rotations, including free-to-play and low-level free-to-play rotations
         /// </summary>
         /// <param name="region">Region on which you want to get the rotation</param>
         /// <returns>Current champion rotation on this region</returns>

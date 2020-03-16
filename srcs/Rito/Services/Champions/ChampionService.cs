@@ -20,7 +20,7 @@ namespace Rito.Services.Champions
 
         public async Task<ChampionRotation> GetChampionRotation(Region region)
         {
-            string response = await _networkClient.SendGetRequest(ROOT_URL, region);
+            string response = await _networkClient.SendGetRequest(region, ROOT_URL);
             return _deserializer.Deserialize<ChampionRotation>(response);
         }
     }
