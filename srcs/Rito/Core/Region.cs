@@ -1,7 +1,7 @@
 ﻿namespace Rito.Core
 {
-    public class Region
+    public enum Region
     {
-        
+        EUW
     }
 }

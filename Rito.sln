@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rito", "Rito\Rito.csproj", "{247A8D68-9E8A-4666-ACF4-FFA6EB592A69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rito", "srcs\Rito\Rito.csproj", "{6574125F-15C2-4C06-BD04-ED438F29B6C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rito.Tests", "tests\Rito.Tests.csproj", "{39343571-9490-4032-A5E6-EC36E6ABF17E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{247A8D68-9E8A-4666-ACF4-FFA6EB592A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{247A8D68-9E8A-4666-ACF4-FFA6EB592A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{247A8D68-9E8A-4666-ACF4-FFA6EB592A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{247A8D68-9E8A-4666-ACF4-FFA6EB592A69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6574125F-15C2-4C06-BD04-ED438F29B6C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6574125F-15C2-4C06-BD04-ED438F29B6C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6574125F-15C2-4C06-BD04-ED438F29B6C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6574125F-15C2-4C06-BD04-ED438F29B6C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39343571-9490-4032-A5E6-EC36E6ABF17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39343571-9490-4032-A5E6-EC36E6ABF17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39343571-9490-4032-A5E6-EC36E6ABF17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39343571-9490-4032-A5E6-EC36E6ABF17E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

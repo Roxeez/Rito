@@ -4,16 +4,16 @@ using Rito.Core;
 
 namespace Rito.Extensions
 {
-    public static class RegionExtension
+    internal static class PlatformExtension
     {
         private const string PlatformDomain = ".api.riotgames.com";
         private static readonly Dictionary<Region, string> _platforms;
 
-        static RegionExtension()
+        static PlatformExtension()
         {
             _platforms = new Dictionary<Region, string>
             {
-                [Region.Euw] = "euw1"
+                [Region.EUW] = "euw1"
             };
         }
         
