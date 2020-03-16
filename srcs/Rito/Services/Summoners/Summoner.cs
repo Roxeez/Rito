@@ -2,7 +2,7 @@
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 
-namespace Rito.Service.Summoners
+namespace Rito.Services.Summoners
 {
     public sealed class Summoner
     {

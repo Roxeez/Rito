@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Rito.Core;
-using Rito.Service.Summoners;
+using Rito.Services.Summoners;
 
-namespace Rito.Service
+namespace Rito.Services
 {
     /// <summary>
     /// Service allowing you to get summoner information from different way

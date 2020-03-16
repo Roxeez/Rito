@@ -3,7 +3,7 @@ using Rito.Core;
 using Rito.Core.Serialization;
 using Rito.Network;
 
-namespace Rito.Service.Summoners
+namespace Rito.Services.Summoners
 {
     public class SummonerService : ISummonerService
     {

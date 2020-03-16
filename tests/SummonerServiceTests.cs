@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using NFluent;
 using Rito.Core;
-using Rito.Service.Summoners;
+using Rito.Services.Summoners;
 using Xunit;
 
 namespace Rito.Tests

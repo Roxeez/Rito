@@ -1,9 +1,9 @@
 ﻿using JetBrains.Annotations;
 using Rito.Core.Serialization;
 using Rito.Network;
-using Rito.Service;
-using Rito.Service.Champions;
-using Rito.Service.Summoners;
+using Rito.Services;
+using Rito.Services.Champions;
+using Rito.Services.Summoners;
 
 namespace Rito
 {

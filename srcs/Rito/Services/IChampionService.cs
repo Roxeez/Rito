@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Rito.Core;
-using Rito.Service.Champions;
+using Rito.Services.Champions;
 
-namespace Rito.Service
+namespace Rito.Services
 {
     /// <summary>
     /// Service allowing you to get information about champion rotation etc..

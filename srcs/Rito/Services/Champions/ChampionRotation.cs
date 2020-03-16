@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Rito.Service.Champions
+namespace Rito.Services.Champions
 {
     public sealed class ChampionRotation
     {

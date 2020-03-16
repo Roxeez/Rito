@@ -6,7 +6,7 @@
 
     <ItemGroup>
       <Folder Include="Core\Converters" />
-      <Folder Include="Service\Masteries" />
+      <Folder Include="Services\Masteries" />
     </ItemGroup>
 
     <ItemGroup>

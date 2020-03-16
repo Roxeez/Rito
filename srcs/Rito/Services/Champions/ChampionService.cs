@@ -3,7 +3,7 @@ using Rito.Core;
 using Rito.Core.Serialization;
 using Rito.Network;
 
-namespace Rito.Service.Champions
+namespace Rito.Services.Champions
 {
     public class ChampionService : IChampionService
     {
