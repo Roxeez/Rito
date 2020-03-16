@@ -10,6 +10,8 @@ namespace Rito.Services.Summoners
         private const string ROOT_URL = "/lol/summoner/v4/summoners";
         private const string BY_NAME_URL = "/by-name/{0}";
         private const string BY_ACCOUNT_URL = "/by-account/{0}";
+        private const string BY_PUUID = "/by-puuid/{0}";
+        private const string BY_SUMMONER_ID = "/{0}";
 
         private readonly INetworkClient _networkClient;
         private readonly IDeserializer _deserializer;
@@ -29,6 +31,18 @@ namespace Rito.Services.Summoners
         public async Task<Summoner> GetSummonerByAccountId(Region region, string encryptedAccountId)
         {
             string response = await _networkClient.SendFormattedGetRequest($"{ROOT_URL}{BY_ACCOUNT_URL}", region, encryptedAccountId);
+            return _deserializer.Deserialize<Summoner>(response);
+        }
+
+        public async Task<Summoner> GetSummonerBySummonerId(Region region, string encryptedSummonerId)
+        {
+            string response = await _networkClient.SendFormattedGetRequest($"{ROOT_URL}{BY_SUMMONER_ID}", region, encryptedSummonerId);
+            return _deserializer.Deserialize<Summoner>(response);
+        }
+
+        public async Task<Summoner> GetSummonerByPUUID(Region region, string encryptedPUUID)
+        {
+            string response = await _networkClient.SendFormattedGetRequest($"{ROOT_URL}{BY_PUUID}", region, encryptedPUUID);
             return _deserializer.Deserialize<Summoner>(response);
         }
     }
