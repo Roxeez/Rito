@@ -2,5 +2,8 @@ version: 1.0.{build}
 environment:
   RIOT_API_KEY:
     secure: rvHFX5ZQBQkpWBbGiB1bLDjjUSXdbS6NMWEW5CLOzztQE/Q8Lh+gajMDHpjvQMNl
+before_build:
+- cmd: nuget restore
 build:
+  project: Rito.sln
   verbosity: minimal
