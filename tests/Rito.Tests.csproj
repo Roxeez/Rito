@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\srcs\Rito\Rito.csproj" />
+      <ProjectReference Include="..\..\Rito\srcs\Rito\Rito.csproj" />
     </ItemGroup>
 
 </Project>

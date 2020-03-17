@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rito", "srcs\Rito\Rito.csproj", "{6574125F-15C2-4C06-BD04-ED438F29B6C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rito.Tests", "..\tests\Rito.Tests\Rito.Tests.csproj", "{5A0597BF-82F4-4468-A4E6-2AEA6D5E6E72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rito.Tests", "tests\Rito.Tests.csproj", "{5A0597BF-82F4-4468-A4E6-2AEA6D5E6E72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
