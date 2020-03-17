@@ -20,7 +20,7 @@ namespace Rito.Tests
                 },
                 new object[]
                 {
-                    new SummonerData(Region.EUW, "GKO Frozen", "X8JLTE1H_J-CNJRw3v6PIRB5cJZ4aBgfae8xvVQjX7K2qf0", "qX7S3AkArB2U9_el9NL-YxQnpbca6Z9MzaeolV19UA2hZQ", "7ff0UmSDQO3faqhsQ8R-ZgvSV-fWYaOi_Is9saHP8L4XY5DHPJb9A2JcmZWl2Ny4hunKf0Oe-i8M2w")
+                    new SummonerData(Region.EUW, "firweer", "pP27h6ZvbUrHhxg-X339klSkWR1QXxwjAeVr712Ji1k_S9rw", "uJBM2E6plWaiH_22hlnEq9Vct427nOf9hRB2R8D-H2zo37uLaJK_ZDrb", "5tyRnUrvyWy9K99Fh6M_SHEDBA_8KV8nxIPcoeBxwNUSdiN0_TnG4pT8DkQXb2DtCOGIoy4DfoaZ0Q")
                 },
                 new object[]
                 {
