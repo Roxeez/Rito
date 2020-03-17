@@ -36,7 +36,7 @@ namespace Rito.Network
 
         public Task<string> SendGetRequest(Region region, string url, params object[] parameters)
         {
-            return SendGetRequest($"{region.GetPlatform()}{url}", parameters);
+            return SendGetRequest($"{region.GetDomain()}{url}", parameters);
         }
 
         private async Task<HttpResponseMessage> SendRequest(HttpRequestMessage request)

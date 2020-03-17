@@ -2,6 +2,16 @@
 {
     public enum Region
     {
-        EUW
+        EUW,
+        NA,
+        EUNE,
+        RU,
+        KR,
+        JP,
+        BR,
+        OCE,
+        TR,
+        LAN,
+        LAS
     }
 }
