@@ -1,4 +1,6 @@
-﻿namespace Rito.Tests
+﻿using System;
+
+namespace Rito.Tests
 {
     public abstract class ServiceTestsBase
     {
@@ -6,7 +8,12 @@
 
         protected ServiceTestsBase()
         {
-            RiotAPI = new RiotAPI("RGAPI-219b9e41-5359-475e-8dfc-1b624de94736");
+            string key = Environment.GetEnvironmentVariable("RIOT_API_KEY");
+            if (string.IsNullOrEmpty(key))
+            {
+                throw new InvalidOperationException("Failed to get RIOT_API_KEY from Environment");
+            }
+            RiotAPI = new RiotAPI(key);
         }
     }
 }
