@@ -16,7 +16,7 @@ namespace Rito.Services.Leagues
         private const string BY_QUEUE = "/by-queue/{0}";
         private const string BY_LEAGUE = "/leagues/{0}";
         private const string BY_QUEUE_TIER_DIVISION = "/{0}/{1}/{2}";
-        private const string BY_SUMMONER_ID = "/{0}";
+        private const string BY_SUMMONER_ID = "/by-summoner/{0}";
 
         private readonly INetworkClient _networkClient;
         private readonly IDeserializer _deserializer;
