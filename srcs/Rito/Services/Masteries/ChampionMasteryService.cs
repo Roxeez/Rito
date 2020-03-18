@@ -8,10 +8,11 @@ namespace Rito.Services.Masteries
 {
     public class ChampionMasteryService : IChampionMasteryService
     {
-        private const string MASTERY_ROOT_URL = "/lol/champion-mastery/v4/champion-masteries/by-summoner";
-        private const string SCORE_ROOT_URL = "/lol/champion-mastery/v4/scores/by-summoner";
-        private const string BY_SUMMONER_ID = "/{0}";
-        private const string BY_SUMMONER_AND_CHAMPION_ID = "/{0}/by-champion/{1}";
+        private const string ROOT_URL = "/lol/champion-mastery/v4";
+        private const string CHAMPION_MASTERIES = "/champion-masteries";
+        private const string SCORES = "/scores";
+        private const string BY_SUMMONER_ID = "/by-summoner/{0}";
+        private const string BY_SUMMONER_AND_CHAMPION_ID = "/by-summoner/{0}/by-champion/{1}";
 
         private readonly INetworkClient _networkClient;
         private readonly IDeserializer _deserializer;
@@ -24,19 +25,19 @@ namespace Rito.Services.Masteries
 
         public async Task<IEnumerable<ChampionMastery>> GetMasteries(Region region, string encryptedSummonerId)
         {
-            string response = await _networkClient.SendGetRequest(region, $"{MASTERY_ROOT_URL}{BY_SUMMONER_ID}", encryptedSummonerId);
+            string response = await _networkClient.SendGetRequest(region, $"{ROOT_URL}{CHAMPION_MASTERIES}{BY_SUMMONER_ID}", encryptedSummonerId);
             return _deserializer.Deserialize<List<ChampionMastery>>(response);
         }
 
         public async Task<ChampionMastery> GetMastery(Region region, string encryptedSummonerId, long championId)
         {
-            string response = await _networkClient.SendGetRequest(region, $"{MASTERY_ROOT_URL}{BY_SUMMONER_AND_CHAMPION_ID}", encryptedSummonerId, championId);
+            string response = await _networkClient.SendGetRequest(region, $"{ROOT_URL}{CHAMPION_MASTERIES}{BY_SUMMONER_AND_CHAMPION_ID}", encryptedSummonerId, championId);
             return _deserializer.Deserialize<ChampionMastery>(response);
         }
 
         public async Task<int> GetTotalMasteryScore(Region region, string encryptedSummonerId)
         {
-            string response = await _networkClient.SendGetRequest(region, $"{SCORE_ROOT_URL}{BY_SUMMONER_ID}", encryptedSummonerId);
+            string response = await _networkClient.SendGetRequest(region, $"{ROOT_URL}{SCORES}{BY_SUMMONER_ID}", encryptedSummonerId);
             return _deserializer.Deserialize<int>(response);
         }
     }

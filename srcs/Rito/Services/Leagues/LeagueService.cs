@@ -12,11 +12,10 @@ namespace Rito.Services.Leagues
         private const string CHALLENGER_LEAGUES = "/challengerleagues";
         private const string GRAND_MASTER_LEAGUES = "/grandmasterleagues";
         private const string MASTER_LEAGUES = "/masterleagues";
-        private const string ENTRIES = "/entries";
         private const string BY_QUEUE = "/by-queue/{0}";
         private const string BY_LEAGUE = "/leagues/{0}";
-        private const string BY_QUEUE_TIER_DIVISION = "/{0}/{1}/{2}";
-        private const string BY_SUMMONER_ID = "/by-summoner/{0}";
+        private const string ENTRIES_BY_QUEUE_TIER_DIVISION = "/entries/{0}/{1}/{2}";
+        private const string ENTRIES_BY_SUMMONER_ID = "/entries/by-summoner/{0}";
 
         private readonly INetworkClient _networkClient;
         private readonly IDeserializer _deserializer;
@@ -53,13 +52,13 @@ namespace Rito.Services.Leagues
 
         public async Task<IEnumerable<LeagueEntry>> GetSummonerLeagues(Region region, string encryptedSummonerId)
         {
-            string response = await _networkClient.SendGetRequest(region, $"{ROOT_URL}{ENTRIES}{BY_SUMMONER_ID}", encryptedSummonerId);
+            string response = await _networkClient.SendGetRequest(region, $"{ROOT_URL}{ENTRIES_BY_SUMMONER_ID}", encryptedSummonerId);
             return _deserializer.Deserialize<List<LeagueEntry>>(response);
         }
 
         public async Task<IEnumerable<LeagueEntry>> GetAllLeagues(Region region, Queue queue, Tier tier, Division division)
         {
-            string response = await _networkClient.SendGetRequest(region, $"{ROOT_URL}{ENTRIES}{BY_QUEUE_TIER_DIVISION}", queue, tier, division);
+            string response = await _networkClient.SendGetRequest(region, $"{ROOT_URL}{ENTRIES_BY_QUEUE_TIER_DIVISION}", queue, tier, division);
             return _deserializer.Deserialize<List<LeagueEntry>>(response);
         }
     }

@@ -6,6 +6,7 @@ namespace Rito.Services
 {
     public interface IMatchService
     {
-        Task<Match> GetMatch(Region region, string matchId);
+        Task<Match> GetMatch(Region region, long matchId);
+        Task<Matchlist> GetMatchlist(Region region, string encryptedAccountId);
     }
 }

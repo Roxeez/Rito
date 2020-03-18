@@ -2,9 +2,12 @@
 {
     public enum Lane
     {
+        NONE,
+        MID,
         MIDDLE,
         TOP,
         JUNGLE,
-        BOT
+        BOT,
+        BOTTOM
     }
 }

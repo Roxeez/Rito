@@ -23,7 +23,7 @@ namespace Rito.Tests.Services
         [InlineData(Region.EUNE)]
         public async Task Return_Correct_Region_Status(Region region)
         {
-            ShardStatus status = await RiotAPI.Statuses.GetRegionStatus(region);
+            ShardStatus status = await RiotAPI.Status.GetRegionStatus(region);
 
             Check.That(status).IsNotNull();
             Check.That(status.Services).IsNotEmpty();
