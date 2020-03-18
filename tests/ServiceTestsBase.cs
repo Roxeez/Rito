@@ -4,7 +4,7 @@ namespace Rito.Tests
 {
     public abstract class ServiceTestsBase
     {
-        protected RiotAPI RiotAPI { get; }
+        protected IRiotAPI RiotAPI { get; }
 
         protected ServiceTestsBase()
         {

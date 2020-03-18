@@ -62,7 +62,7 @@ namespace Rito.Tests.Services
 
             Check.That(leagues).IsNotNull();
             Check.That(leagues).IsNotEmpty();
-            Check.That(leagues).ContainsOnlyElementsThatMatch(x => x.QueueType == queue.ToString());
+            Check.That(leagues).ContainsOnlyElementsThatMatch(x => x.QueueType == queue);
         }
 
         [Theory]

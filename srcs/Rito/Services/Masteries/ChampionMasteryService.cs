@@ -6,7 +6,7 @@ using Rito.Network;
 
 namespace Rito.Services.Masteries
 {
-    public class MasteryService : IMasteryService
+    public class ChampionMasteryService : IChampionMasteryService
     {
         private const string MASTERY_ROOT_URL = "/lol/champion-mastery/v4/champion-masteries/by-summoner";
         private const string SCORE_ROOT_URL = "/lol/champion-mastery/v4/scores/by-summoner";
@@ -16,22 +16,22 @@ namespace Rito.Services.Masteries
         private readonly INetworkClient _networkClient;
         private readonly IDeserializer _deserializer;
 
-        public MasteryService(INetworkClient networkClient, IDeserializer deserializer)
+        public ChampionMasteryService(INetworkClient networkClient, IDeserializer deserializer)
         {
             _networkClient = networkClient;
             _deserializer = deserializer;
         }
 
-        public async Task<IEnumerable<Mastery>> GetMasteries(Region region, string encryptedSummonerId)
+        public async Task<IEnumerable<ChampionMastery>> GetMasteries(Region region, string encryptedSummonerId)
         {
             string response = await _networkClient.SendGetRequest(region, $"{MASTERY_ROOT_URL}{BY_SUMMONER_ID}", encryptedSummonerId);
-            return _deserializer.Deserialize<List<Mastery>>(response);
+            return _deserializer.Deserialize<List<ChampionMastery>>(response);
         }
 
-        public async Task<Mastery> GetMastery(Region region, string encryptedSummonerId, long championId)
+        public async Task<ChampionMastery> GetMastery(Region region, string encryptedSummonerId, long championId)
         {
             string response = await _networkClient.SendGetRequest(region, $"{MASTERY_ROOT_URL}{BY_SUMMONER_AND_CHAMPION_ID}", encryptedSummonerId, championId);
-            return _deserializer.Deserialize<Mastery>(response);
+            return _deserializer.Deserialize<ChampionMastery>(response);
         }
 
         public async Task<int> GetTotalMasteryScore(Region region, string encryptedSummonerId)

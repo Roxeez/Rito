@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
+using Rito.Core;
 
 namespace Rito.Services.Leagues
 {
@@ -9,10 +10,10 @@ namespace Rito.Services.Leagues
         public string Id { get; private set; }
         
         [JsonProperty]
-        public string Tier { get; private set; }
+        public Tier Tier { get; private set; }
         
         [JsonProperty]
-        public string Queue { get; private set; }
+        public Queue Queue { get; private set; }
         
         [JsonProperty]
         public List<LeagueItem> Entries { get; private set; }

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Rito.Core;
 
 namespace Rito.Services.Leagues
 {
@@ -32,7 +33,7 @@ namespace Rito.Services.Leagues
         public bool Inactive { get; private set; }
         
         [JsonProperty]
-        public string Rank { get; private set; }
+        public Division Rank { get; private set; }
         
         [JsonProperty("leaguePoints")]
         public int Points { get; private set; }

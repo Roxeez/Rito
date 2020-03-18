@@ -2,7 +2,7 @@
 
 namespace Rito.Services.Masteries
 {
-    public class Mastery
+    public class ChampionMastery
     {
         [JsonProperty]
         public bool ChestGranted { get; private set; }

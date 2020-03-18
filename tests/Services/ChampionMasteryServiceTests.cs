@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Rito.Tests.Services
 {
-    public class MasteryServiceTests : ServiceTestsBase
+    public class ChampionMasteryServiceTests : ServiceTestsBase
     {
         public static IEnumerable<object[]> Summoners = Database.GetSummoners();
         
@@ -16,7 +16,7 @@ namespace Rito.Tests.Services
         [MemberData(nameof(Summoners))]
         public async Task Return_Correct_Total_Mastery_Score(SummonerData summonerData)
         {
-            int score = await RiotAPI.Masteries.GetTotalMasteryScore(summonerData.Region, summonerData.Id);
+            int score = await RiotAPI.ChampionMasteries.GetTotalMasteryScore(summonerData.Region, summonerData.Id);
 
             Check.That(score).IsNotZero();
         }
@@ -25,7 +25,7 @@ namespace Rito.Tests.Services
         [MemberData(nameof(Summoners))]
         public async Task Return_All_Masteries(SummonerData summonerData)
         {
-            IEnumerable<Mastery> masteries = await RiotAPI.Masteries.GetMasteries(summonerData.Region, summonerData.Id);
+            IEnumerable<ChampionMastery> masteries = await RiotAPI.ChampionMasteries.GetMasteries(summonerData.Region, summonerData.Id);
             
             Check.That(masteries).IsNotEmpty();
         }

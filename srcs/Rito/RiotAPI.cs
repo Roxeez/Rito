@@ -5,23 +5,18 @@ using Rito.Services;
 using Rito.Services.Champions;
 using Rito.Services.Leagues;
 using Rito.Services.Masteries;
+using Rito.Services.Status;
 using Rito.Services.Summoners;
 
 namespace Rito
 {
-    public sealed class RiotAPI
+    public sealed class RiotAPI : IRiotAPI
     {
-        [NotNull]
         public IChampionService Champions { get; }
-        
-        [NotNull]
         public ISummonerService Summoners { get; }
-        
-        [NotNull]
-        public IMasteryService Masteries { get; }
-        
-        [NotNull]
+        public IChampionMasteryService ChampionMasteries { get; }
         public ILeagueService Leagues { get; }
+        public IStatusService Status { get; }
 
         public RiotAPI([NotNull] string apiKey)
         {
@@ -30,8 +25,9 @@ namespace Rito
             
             Champions = new ChampionService(networkClient, deserializer);
             Summoners = new SummonerService(networkClient, deserializer);
-            Masteries = new MasteryService(networkClient, deserializer);
+            ChampionMasteries = new ChampionMasteryService(networkClient, deserializer);
             Leagues = new LeagueService(networkClient, deserializer);
+            Status = new StatusService(networkClient, deserializer);
         }
     }
 }
