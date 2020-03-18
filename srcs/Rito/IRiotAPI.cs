@@ -18,6 +18,9 @@ namespace Rito
         public ILeagueService Leagues { get; }
         
         [NotNull]
-        public IStatusService Status { get; }
+        public IStatusService Statuses { get; }
+        
+        [NotNull]
+        public IMatchService Matches { get; }
     }
 }

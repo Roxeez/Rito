@@ -2,6 +2,7 @@
 {
     public enum Tier
     {
+        UNRANKED,
         IRON,
         BRONZE,
         SILVER,

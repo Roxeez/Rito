@@ -16,7 +16,8 @@ namespace Rito
         public ISummonerService Summoners { get; }
         public IChampionMasteryService ChampionMasteries { get; }
         public ILeagueService Leagues { get; }
-        public IStatusService Status { get; }
+        public IStatusService Statuses { get; }
+        public IMatchService Matches { get; }
 
         public RiotAPI([NotNull] string apiKey)
         {
@@ -27,7 +28,7 @@ namespace Rito
             Summoners = new SummonerService(networkClient, deserializer);
             ChampionMasteries = new ChampionMasteryService(networkClient, deserializer);
             Leagues = new LeagueService(networkClient, deserializer);
-            Status = new StatusService(networkClient, deserializer);
+            Statuses = new StatusService(networkClient, deserializer);
         }
     }
 }
